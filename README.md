@@ -1,10 +1,10 @@
 # OxTrack
 
-### A personal CRM for managing the software engineering job search.
+> A personal CRM for managing the software engineering job search.
 
-OxTrack is a modern job-search management application designed to help candidates organize job applications, track hiring progress, manage recruiter information, prepare for interviews, and understand their job-search activity through analytics.
+OxTrack is a modern job-search management application that helps candidates organize applications, track hiring progress, manage recruiter information, prepare for interviews, and understand job-search activity through analytics.
 
-Instead of managing applications across spreadsheets, bookmarks, notes, and calendars, OxTrack brings the core job-search workflow into one focused workspace.
+Instead of managing applications across spreadsheets, bookmarks, notes, calendars, and email, OxTrack brings the core job-search workflow into one focused workspace.
 
 ---
 
@@ -12,7 +12,7 @@ Instead of managing applications across spreadsheets, bookmarks, notes, and cale
 
 ### 📋 Application Management
 
-Create and manage job applications with important information including:
+Create and manage job applications with all the important information in one place:
 
 - Company
 - Role
@@ -26,203 +26,182 @@ Create and manage job applications with important information including:
 - Next action
 - Role description
 
-Applications can be created, edited, viewed, and removed from the dashboard.
-
----
+Applications can be created, edited, viewed, and removed directly from the dashboard.
 
 ### 📊 Kanban Job Pipeline
 
-Visualize applications throughout the hiring process using a Kanban-style workflow.
+Visualize applications throughout the hiring process with a Kanban-style workflow:
 
 ```text
-Saved
-  ↓
-Applied
-  ↓
-Screening
-  ↓
-Interview
-  ↓
-Final Round
-  ↓
-Offer
+Saved → Applied → Screening → Interview → Final Round → Offer
+```
 
-Rejected applications can also be tracked separately.
+Rejected applications can also be tracked separately, making it easy to understand the current state of the entire job search at a glance.
 
-This makes it easy to understand the current state of the entire job search at a glance.
-
-🔎 Search & Organization
+### 🔎 Search & Organization
 
 Quickly find applications and navigate through the job-search workspace without relying on scattered spreadsheets or documents.
 
-👤 Recruiter Tracking
+### 👤 Recruiter Tracking
 
-Recruiter information can be stored directly alongside an application.
+Store recruiter information alongside each application, including:
 
-Track:
+- Recruiter name
+- Recruiter email
+- Application-specific notes
+- Follow-up actions
 
-Recruiter name
-Recruiter email
-Application-specific notes
-Follow-up actions
+This keeps the context surrounding each hiring process connected to the relevant application.
 
-This allows each application to retain the context surrounding the hiring process.
+### 🎯 Next Actions
 
-🎯 Next Actions
+Add a specific next action to every application, such as:
 
-Applications can contain a specific next action, such as:
+- Follow up with a recruiter
+- Prepare for an interview
+- Complete a take-home assignment
+- Send a referral request
+- Check application status
 
-Follow up with recruiter
-Prepare for interview
-Complete a take-home assignment
-Send a referral request
-Check application status
+This turns OxTrack into an actionable workflow rather than simply a list of applications.
 
-This turns the tracker into an actionable workflow rather than simply a list of applications.
+### 🎤 Interview Tracking
 
-🎤 Interview Tracking
+Track interviews associated with the job-search process, including:
 
-Track interviews associated with the job-search process.
-
-Interview information includes:
-
-Interview date
-Interview type
-Interviewer
-Completion status
-Preparation focus
+- Interview date
+- Interview type
+- Interviewer
+- Completion status
+- Preparation focus
 
 The interview preparation interface provides structured preparation material for different interview categories.
 
-📈 Job Search Analytics
+### 📈 Job-Search Analytics
 
-OxTrack provides analytics to help understand job-search activity.
+OxTrack provides analytics to help make the job search measurable rather than relying entirely on intuition.
 
-The analytics experience includes information such as:
+The analytics experience includes:
 
-Total applications
-Application activity
-Interviews
-Offers
-Rejections
-Application status distribution
-Interview conversion
-Application trends
+- Total applications
+- Application activity
+- Interviews
+- Offers
+- Rejections
+- Application status distribution
+- Interview conversion
+- Application trends
 
-The goal is to make the job search measurable rather than relying entirely on intuition.
+---
 
-🧠 Why OxTrack?
+## 🧠 Why OxTrack?
 
-Job hunting is often fragmented across multiple tools.
+Job hunting is often fragmented across multiple tools:
 
-LinkedIn
-   ↓
-Find jobs
+| Tool | Purpose |
+| --- | --- |
+| LinkedIn | Find jobs |
+| Company careers pages | Submit applications |
+| Spreadsheets | Track applications |
+| Notes | Prepare for interviews |
+| Calendars | Track interview dates |
+| Email | Manage recruiter communication |
 
-Company Careers Page
-   ↓
-Submit applications
+OxTrack brings this core tracking workflow into a single workspace.
 
-Spreadsheet
-   ↓
-Track applications
+> Treat the job search like a pipeline instead of a collection of disconnected applications.
 
-Notes
-   ↓
-Interview preparation
+---
 
-Calendar
-   ↓
-Interview dates
-
-Email
-   ↓
-Recruiter communication
-
-OxTrack brings the core tracking workflow into a single workspace.
-
-The product is based on a simple idea:
-
-Treat the job search like a pipeline instead of a collection of disconnected applications.
-
-🎨 Design Philosophy
+## 🎨 Design Philosophy
 
 OxTrack follows a productivity-focused interface inspired by modern developer and productivity tools.
 
 The design focuses on:
 
-Clear visual hierarchy
-High information density without visual clutter
-Consistent spacing
-Reusable UI components
-Clear application states
-Responsive layouts
-Subtle animations
-Smooth transitions
-Fast interactions
-Minimal visual noise
+- Clear visual hierarchy
+- High information density without visual clutter
+- Consistent spacing
+- Reusable UI components
+- Clear application states
+- Responsive layouts
+- Subtle animations
+- Smooth transitions
+- Fast interactions
+- Minimal visual noise
 
-Motion is intentionally restrained and primarily used to communicate state changes and hierarchy.
+Motion is intentionally restrained and primarily used to communicate state changes and hierarchy. Examples include:
 
-Examples include:
+- Application-card hover states
+- Modal entrance animations
+- Drawer transitions
+- Backdrop transitions
+- Staggered list animations
+- Drag-and-drop feedback
 
-Application card hover states
-Modal entrance animations
-Drawer transitions
-Backdrop transitions
-Staggered list animations
-Drag-and-drop feedback
-🏗️ Architecture
+---
+
+## 🏗️ Architecture
 
 OxTrack is built as a component-driven Next.js application.
 
-                    ┌─────────────────────┐
-                    │      Next.js App    │
-                    └──────────┬──────────┘
-                               │
-              ┌────────────────┼────────────────┐
-              │                │                │
-              ▼                ▼                ▼
-        Applications       Analytics        Interviews
-              │                │                │
-              └────────────────┼────────────────┘
-                               │
-                               ▼
-                        Zustand Store
-                               │
-                ┌──────────────┴──────────────┐
-                │                             │
-                ▼                             ▼
-          Application State              UI State
-          • Applications                 • Drawer
-          • Status                       • Forms
-          • Interviews                   • Selection
-          • Recruiters                   • Editing
+```text
+                         ┌─────────────────────┐
+                         │      Next.js App    │
+                         └──────────┬──────────┘
+                                    │
+                  ┌─────────────────┼─────────────────┐
+                  │                 │                 │
+                  ▼                 ▼                 ▼
+            Applications        Analytics        Interviews
+                  │                 │                 │
+                  └─────────────────┼─────────────────┘
+                                    │
+                                    ▼
+                             Zustand Store
+                                    │
+                    ┌───────────────┴───────────────┐
+                    │                               │
+                    ▼                               ▼
+             Application State                 UI State
+             • Applications                     • Drawer
+             • Status                           • Forms
+             • Interviews                       • Selection
+             • Recruiters                        • Editing
+```
 
 The project separates:
 
-UI components
-Application state
-Domain types
-Utility functions
-Analytics calculations
-Animation definitions
-Mock application data
+- UI components
+- Application state
+- Domain types
+- Utility functions
+- Analytics calculations
+- Animation definitions
+- Mock application data
 
 This structure keeps the application modular and makes individual features easier to extend.
 
-🛠️ Tech Stack
-Technology	Purpose
-Next.js	Application framework
-React	User interface
-TypeScript	Type safety
-Tailwind CSS	Styling
-Framer Motion	UI animations
-Zustand	Client-side state management
-Lucide React	Icons
-📁 Project Structure
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+| --- | --- |
+| [Next.js](https://nextjs.org/) | Application framework |
+| [React](https://react.dev/) | User interface |
+| [TypeScript](https://www.typescriptlang.org/) | Type safety |
+| [Tailwind CSS](https://tailwindcss.com/) | Styling |
+| [Framer Motion](https://motion.dev/) | UI animations |
+| [Zustand](https://zustand.docs.pmnd.rs/) | Client-side state management |
+| [Lucide React](https://lucide.dev/) | Icons |
+
+---
+
+## 📁 Project Structure
+
+```text
 oxTrack/
-│
 ├── app/
 │   ├── analytics/
 │   ├── companies/
@@ -251,114 +230,133 @@ oxTrack/
 │   └── utils.ts
 │
 ├── public/
-│
 ├── package.json
 └── README.md
-🚀 Getting Started
-Prerequisites
+```
 
-Make sure you have installed:
+---
 
-Node.js 18+
-npm
-Git
-Clone the Repository
-git clone https://github.com/pranav172/oxTrack.git
+## 🚀 Getting Started
 
-Navigate into the project:
+### Prerequisites
 
-cd oxTrack
+Make sure you have the following installed:
 
-Install dependencies:
+- [Node.js 18+](https://nodejs.org/)
+- npm
+- Git
 
-npm install
+### Installation
 
-Start the development server:
+1. Clone the repository:
 
-npm run dev
+   ```bash
+   git clone https://github.com/pranav172/oxTrack.git
+   ```
 
-Open the application at:
+2. Navigate to the project directory:
 
-http://localhost:3000
-⚙️ Available Scripts
-Development
-npm run dev
+   ```bash
+   cd oxTrack
+   ```
 
-Starts the Next.js development server.
+3. Install dependencies:
 
-Production Build
-npm run build
+   ```bash
+   npm install
+   ```
 
-Creates an optimized production build.
+4. Start the development server:
 
-Production Server
-npm start
+   ```bash
+   npm run dev
+   ```
 
-Starts the production server after building the application.
+5. Open the application at [http://localhost:3000](http://localhost:3000).
 
-📊 Core Workflow
+---
+
+## ⚙️ Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Starts the Next.js development server. |
+| `npm run build` | Creates an optimized production build. |
+| `npm start` | Starts the production server after building the application. |
+
+---
+
+## 📊 Core Workflow
 
 The primary OxTrack workflow is:
 
-                 Discover Job
-                      │
-                      ▼
-                Save Application
-                      │
-                      ▼
-                    Apply
-                      │
-                      ▼
-                 Screening
-                      │
-                      ▼
-                  Interview
-                      │
-                      ▼
-                 Final Round
-                  /       \
-                 /         \
-                ▼           ▼
-           Rejected        Offer
+```text
+Discover Job
+     │
+     ▼
+Save Application
+     │
+     ▼
+Apply
+     │
+     ▼
+Screening
+     │
+     ▼
+Interview
+     │
+     ▼
+Final Round
+   /     \
+  /       \
+ ▼         ▼
+Rejected  Offer
+```
 
-At each stage, the user can maintain relevant information and define the next action.
+At each stage, users can maintain relevant information and define the next action.
 
-🔮 Future Improvements
+---
+
+## 🔮 Future Improvements
 
 Potential future versions of OxTrack could include:
 
-User authentication
-PostgreSQL persistence
-Cloud synchronization
-REST API
-Email integration
-Calendar integration
-Browser extension for saving jobs
-Automatic job importing
-Resume-to-job matching
-AI-powered job analysis
-Recruiter follow-up reminders
-Application success-rate analysis
-Automated interview preparation
-Notification system
-📌 Project Status
+- User authentication
+- PostgreSQL persistence
+- Cloud synchronization
+- REST API
+- Email integration
+- Calendar integration
+- Browser extension for saving jobs
+- Automatic job importing
+- Resume-to-job matching
+- AI-powered job analysis
+- Recruiter follow-up reminders
+- Application success-rate analysis
+- Automated interview preparation
+- Notification system
+
+---
+
+## 📌 Project Status
 
 OxTrack is an actively developed portfolio project.
 
 The current version focuses on the core job-search workflow, application management, Kanban pipeline management, interview tracking, analytics, and a modern productivity-oriented interface.
 
-👨‍💻 Author
-Pranav Raj
+---
 
-B.Tech Information Technology
+## 👨‍💻 Author
+
+**Pranav Raj**  
+B.Tech Information Technology  
 Manipal University Jaipur
 
-Portfolio:
-https://www.pranavraj.xyz
+- **Portfolio:** [pranavraj.xyz](https://www.pranavraj.xyz)
+- **GitHub:** [@pranav172](https://github.com/pranav172)
 
-GitHub:
-https://github.com/pranav172
+---
 
-License
+## 📄 License
 
 This project is licensed under the MIT License.
