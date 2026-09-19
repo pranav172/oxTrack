@@ -1515,19 +1515,19 @@ video {
   --card: #ffffff;
   --border: #e5e5e5;
   --muted: #f5f5f5;
-  --fg: #171717;
+  --fg: #0005049b;
   --faint: #737373;
   --primary: #6366f1;
 }
 
 .dark {
-  --bg: #0a0a0b;
-  --card: #131316;
-  --border: #26262b;
-  --muted: #1c1c21;
+  --bg: #000506;
+  --card: #000502;
+  --border: #50508275;
+  --muted: #7070946a;
   --fg: #ededed;
   --faint: #8b8b93;
-  --primary: #818cf8;
+  --primary: #198bd2;
 }
 
 body {
